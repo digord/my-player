@@ -72,7 +72,10 @@
           { artist: 'Breath', track: 'Jazz-sax-2', file: '/tracks/1.mp3', duration: '00:05' },
           { artist: 'Super', track: 'Compressed-jazzkit', file: '/tracks/2.mp3', duration: '00:05'},
           { artist: 'Rhodes', track: 'Rhodes-walkdown', file: '/tracks/3.mp3', duration: '00:04'},
-          { artist: 'Tylersrevenge', track: 'Idiosyncrasy', file: '/tracks/4.mp3', duration: '02:38'}
+          { artist: 'Tylersrevenge', track: 'Idiosyncrasy', file: '/tracks/4.mp3', duration: '02:38'},
+          { artist: 'Alan Walker', track: 'Spectre [NCS Release]', file: '/tracks/5.webm', duration: '02:38'},
+          { artist: 'DEAF KEV', track: 'Invincible [NCS Release]', file: '/tracks/6.webm', duration: '04:33'},
+          { artist: 'Different Heaven & EH!DE', track: 'My Heart [NCS Release]', file: '/tracks/7.webm', duration: '04:27'}
         ],
         search: '',
         audio: null,
@@ -125,7 +128,7 @@
         this.volume = value
       },
       setTrack (item) {
-        if (item.file === this.currentTrack.file) {
+        if (this.currentTrack && item.file === this.currentTrack.file) {
           if (this.paused) {
             this.play()
           } else {
